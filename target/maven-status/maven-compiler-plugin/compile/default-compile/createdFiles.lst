@@ -1,5 +1,6 @@
 com\bookverse\data\notice.class
 com\bookverse\controllers\borrowController.class
+com\bookverse\filter\AuthFilter.class
 com\bookverse\controllers\noticeController.class
 com\bookverse\controllers\catalogController.class
 com\bookverse\controllers\reservationsController.class

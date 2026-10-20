@@ -18,33 +18,6 @@
             <p class="text-muted mb-0">Books you have borrowed</p>
         </div>
 
-        <div class="row g-3 mb-4">
-            <div class="col-12 col-md-4">
-                <div class="card shadow-sm border-0 h-100">
-                    <div class="card-body">
-                        <p class="text-muted mb-1">Currently borrowed</p>
-                        <p class="display-6 fw-bold text-success mb-0">3</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <div class="card shadow-sm border-0 h-100">
-                    <div class="card-body">
-                        <p class="text-muted mb-1">Due within 3 days</p>
-                        <p class="display-6 fw-bold text-warning mb-0">1</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <div class="card shadow-sm border-0 h-100">
-                    <div class="card-body">
-                        <p class="text-muted mb-1">Overdue</p>
-                        <p class="display-6 fw-bold text-danger mb-0">1</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Tabs -->
         <div class="card shadow-sm border-0">
             <div class="card-header bg-white pt-3 pb-0">
@@ -53,11 +26,6 @@
                         <button class="nav-link active link-success" id="current-tab" data-bs-toggle="tab"
                                 data-bs-target="#current" type="button" role="tab"
                                 aria-controls="current" aria-selected="true">Currently borrowed</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link link-success" id="history-tab" data-bs-toggle="tab"
-                                data-bs-target="#history" type="button" role="tab"
-                                aria-controls="history" aria-selected="false">Borrow history</button>
                     </li>
                 </ul>
             </div>
@@ -102,52 +70,10 @@
                         </table>
                     </div>
                 </div>
-
-                <!-- Borrow history -->
-                <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab" tabindex="0">
-                    <div class="table-responsive">
-                        <table class="table table-hover align-middle mb-0">
-                            <thead class="table-light">
-                                <tr>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Author</th>
-                                    <th scope="col">Borrowed on</th>
-                                    <th scope="col">Returned on</th>
-                                    <th scope="col">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><a href="book?id=3" class="link-dark fw-semibold">Head First Java</a></td>
-                                    <td>Kathy Sierra and Bert Bates</td>
-                                    <td>2026-09-02</td>
-                                    <td>2026-09-15</td>
-                                    <td><span class="badge text-bg-success">Returned</span></td>
-                                </tr>
-                                <tr>
-                                    <td><a href="book?id=8" class="link-dark fw-semibold">Learning SQL</a></td>
-                                    <td>Alan Beaulieu</td>
-                                    <td>2026-08-10</td>
-                                    <td>2026-08-27</td>
-                                    <td><span class="badge text-bg-warning">Returned late</span></td>
-                                </tr>
-                                <tr>
-                                    <td><a href="book?id=14" class="link-dark fw-semibold">The Mythical Man-Month</a></td>
-                                    <td>Frederick P. Brooks Jr.</td>
-                                    <td>2026-07-05</td>
-                                    <td>2026-07-18</td>
-                                    <td><span class="badge text-bg-success">Returned</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
             </div>
         </div>
     </main>
 
     <layout:footer/>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

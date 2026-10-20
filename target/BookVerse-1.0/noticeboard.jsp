@@ -34,21 +34,21 @@
                         
                         <c:choose>
                             <c:when test="${notice.type=='important'}">
-                                <c:set var="color" value="text-bg-danger"/>
+                                <c:set var="color" value="danger"/>
                             </c:when>
                             <c:when test="${notice.type=='update'}">
-                                <c:set var="color" value="text-bg-warning"/>
+                                <c:set var="color" value="warning"/>
                             </c:when>
                             <c:otherwise>
-                                <c:set var="color" value="text-bg-success"/>
+                                <c:set var="color" value="success"/>
                             </c:otherwise>
                         </c:choose>
                         
-                        <div class="card shadow-sm border-0 border-start border-danger border-4">
+                        <div class="card shadow-sm border-0 border-start border-${pageScope.color} border-4">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-start gap-2 mb-1">
                                     <h2 class="h5 mb-0">${notice.title}</h2>
-                                    <span class="badge ${pageScope.color}">${notice.type}</span>
+                                    <span class="badge text-bg-${pageScope.color}">${notice.type}</span>
                                 </div>
                                 <p class="text-muted small mb-2">${notice.message}</p>
                             </div>
@@ -76,6 +76,5 @@
     </main>
 
     <layout:footer/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

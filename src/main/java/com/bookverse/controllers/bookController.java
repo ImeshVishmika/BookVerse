@@ -26,8 +26,10 @@ public class bookController extends HttpServlet {
             req.setAttribute("book", bookService.getBook(id));
             req.getRequestDispatcher("/book.jsp").forward(req, resp);
         } catch (Exception e) {
+            req.setAttribute("error", "Something went wrong. Try again...!");
             req.getRequestDispatcher("/index.jsp").forward(req, resp);
         }
+        
     }
 
 }

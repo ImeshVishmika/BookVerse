@@ -19,10 +19,15 @@ public class catalogController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-         bookService bookservise = new bookService();
-         req.setAttribute("books", bookservise.loadBooks());
-         req.getRequestDispatcher("/catalogue.jsp").forward(req, resp);
+
+        try {
+            bookService bookservise = new bookService();
+            req.setAttribute("books", bookservise.loadBooks());
+            req.getRequestDispatcher("/catalogue.jsp").forward(req, resp);
+        } catch (Exception e) {
+            req.setAttribute("error", "Something went wrong. Try again...!");
+            req.getRequestDispatcher("/index.jsp").forward(req, resp);
+        }
     }
-    
-    
+
 }

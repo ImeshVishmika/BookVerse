@@ -8,6 +8,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="layout" tagdir="/WEB-INF/tags" %>
 
+<layout:auth/>
 <c:set var="reservations" value="${requestScope.reservations}" />
 
 <layout:header title="Reservations" />
@@ -23,31 +24,7 @@
 
         <div class="row g-4">
 
-            <!-- Reserve form -->
-            <div class="col-12 col-lg-4">
-                <div class="card shadow-sm border-0 border-top border-success border-4 h-100">
-                    <div class="card-body p-4">
-                        <h2 class="h5 mb-1">Reserve a book</h2>
-                        <p class="text-muted small mb-3">Only books with no copies available can be reserved.</p>
-
-                        <form action="reserve" method="post">
-                            <div class="mb-3">
-                                <label for="bookId" class="form-label">Book</label>
-                                <select class="form-select" id="bookId" name="bookId" required>
-                                    <option value="" selected disabled>Choose a book</option>
-                                    <option value="4">The Pragmatic Programmer, Andrew Hunt and David Thomas</option>
-                                    <option value="9">High Performance MySQL, Baron Schwartz</option>
-                                    <option value="12">TCP/IP Illustrated, Volume 1, W. Richard Stevens and Kevin Fall</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-success w-100">Reserve book</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Reservation lists -->
-            <div class="col-12 col-lg-8">
+            <div class="col-12">
                 <div class="card shadow-sm border-0">
                     <div class="card-header bg-white pt-3 pb-0">
                         <ul class="nav nav-tabs card-header-tabs" id="reservationTab" role="tablist">
@@ -149,6 +126,5 @@
 
     <layout:footer/>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

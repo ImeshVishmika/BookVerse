@@ -22,17 +22,6 @@
         <div class="card shadow-sm border-0 border-start border-success border-4 mb-4">
             <div class="card-body p-4">
                 <h1 class="h3 mb-1">Welcome back ,${pageScope.userName} </h1>
-                <p class="text-muted">Search the catalogue, or pick up where you left off.</p>
-                <form action="search" method="get" class="row g-2">
-                    <div class="col-12 col-md-8 col-lg-9">
-                        <label for="q" class="visually-hidden">Search books</label>
-                        <input type="text" class="form-control form-control-lg" id="q" name="q"
-                               placeholder="Search by title, author, or ISBN">
-                    </div>
-                    <div class="col-12 col-md-4 col-lg-3 d-grid">
-                        <button type="submit" class="btn btn-success btn-lg">Search</button>
-                    </div>
-                </form>
             </div>
         </div>
 
@@ -70,7 +59,7 @@
         <div class="card shadow-sm border-0 h-100">
             <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
                 <h2 class="h5 mb-0">Currently borrowed</h2>
-                <a href="my-books.html" class="link-success small">View all</a>
+                <a href="borrowed" class="link-success small">View all</a>
             </div>
             <div class="table-responsive">
                 <table class="table table-hover align-middle mb-0">
@@ -116,7 +105,7 @@
                 <div class="card shadow-sm border-0 h-100">
                     <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
                         <h2 class="h5 mb-0">Notice board</h2>
-                        <a href="notices.html" class="link-success small">View all</a>
+                        <a href="notice" class="link-success small">View all</a>
                     </div>
                     <div class="list-group list-group-flush">
                         <div class="list-group-item">
@@ -157,7 +146,7 @@
                         <span class="badge text-bg-success align-self-start mb-2">Programming</span>
                         <h3 class="h6">Effective Java</h3>
                         <p class="text-muted small">Joshua Bloch</p>
-                        <a href="book?id=10" class="btn btn-outline-success btn-sm mt-auto">View details</a>
+                        <a href="book?id=2" class="btn btn-outline-success btn-sm mt-auto">View details</a>
                     </div>
                 </div>
             </div>
@@ -167,7 +156,7 @@
                         <span class="badge text-bg-success align-self-start mb-2">Databases</span>
                         <h3 class="h6">Database System Concepts</h3>
                         <p class="text-muted small">Abraham Silberschatz</p>
-                        <a href="book?id=11" class="btn btn-outline-success btn-sm mt-auto">View details</a>
+                        <a href="book?id=7" class="btn btn-outline-success btn-sm mt-auto">View details</a>
                     </div>
                 </div>
             </div>
@@ -177,7 +166,7 @@
                         <span class="badge text-bg-success align-self-start mb-2">Networking</span>
                         <h3 class="h6">Computer Networking</h3>
                         <p class="text-muted small">James Kurose</p>
-                        <a href="book?id=12" class="btn btn-outline-success btn-sm mt-auto">View details</a>
+                        <a href="book?id=11" class="btn btn-outline-success btn-sm mt-auto">View details</a>
                     </div>
                 </div>
             </div>
@@ -187,7 +176,7 @@
                         <span class="badge text-bg-success align-self-start mb-2">Management</span>
                         <h3 class="h6">The Mythical Man-Month</h3>
                         <p class="text-muted small">Frederick Brooks</p>
-                        <a href="book?id=13" class="btn btn-outline-success btn-sm mt-auto">View details</a>
+                        <a href="book?id=14" class="btn btn-outline-success btn-sm mt-auto">View details</a>
                     </div>
                 </div>
             </div>
@@ -195,7 +184,5 @@
     </main>
     
     <layout:footer/>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

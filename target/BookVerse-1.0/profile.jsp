@@ -40,8 +40,7 @@
                     </div>
 
                     <div class="card-footer bg-white d-grid gap-2">
-                        <a href="my-books.html" class="btn btn-outline-success btn-sm">View my books</a>
-                        <a href="reservations.html" class="btn btn-outline-success btn-sm">View reservations</a>
+                        <a href="reservations" class="btn btn-outline-success btn-sm">View reservations</a>
                     </div>
                 </div>
             </div>

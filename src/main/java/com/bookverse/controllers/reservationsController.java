@@ -21,17 +21,22 @@ public class reservationsController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        reservations reservation = new reservations();
-        HttpSession session = req.getSession(false);
-        userDTO userDTO = (userDTO)session.getAttribute("user");
-        req.setAttribute("reservations", reservation.getReservations(userDTO.getUserName()));
-        req.getRequestDispatcher("/reservations.jsp").forward(req, resp);
+
+        try {
+            reservations reservation = new reservations();
+            HttpSession session = req.getSession(false);
+            if (session == null || session.getAttribute("user") == null) {
+                req.setAttribute("error", "Please logIn....!");
+                req.getRequestDispatcher("/login.jsp").forward(req, resp);
+                return;
+            }
+            userDTO userDTO = (userDTO) session.getAttribute("user");
+            req.setAttribute("reservations", reservation.getReservations(userDTO.getUserName()));
+            req.getRequestDispatcher("/reservations.jsp").forward(req, resp);
+        } catch (Exception e) {
+            req.setAttribute("error", "Something went wrong. Try again...!");
+            req.getRequestDispatcher("/index.jsp").forward(req, resp);
+        }
     }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-    }
-    
-    
 }

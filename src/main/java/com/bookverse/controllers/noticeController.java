@@ -19,8 +19,14 @@ public class noticeController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        noticeService noticeService = new noticeService();
-        req.setAttribute("notice", noticeService.getNotice());
-        req.getRequestDispatcher("/noticeboard.jsp").forward(req, resp);
+
+        try {
+            noticeService noticeService = new noticeService();
+            req.setAttribute("notice", noticeService.getNotice());
+            req.getRequestDispatcher("/noticeboard.jsp").forward(req, resp);
+        } catch (Exception e) {
+            req.setAttribute("error", "Something went wrong. Try again...!");
+            req.getRequestDispatcher("/index.jsp").forward(req, resp);
+        }
     }
 }

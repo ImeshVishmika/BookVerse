@@ -35,5 +35,4 @@
     </section>
 </main>
 
-
 <layout:footer/>
